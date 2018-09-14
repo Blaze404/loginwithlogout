@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="assets/css/index_styles.min.css">
 </head>
 <?php
-echo "Hello World! Today is: ";
-echo date('d - m - y');
+
 ?>
 <body>
     <div class="highlight-clean">

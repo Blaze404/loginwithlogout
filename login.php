@@ -1,6 +1,6 @@
 <?php
 define('__CONFIG__', true);
-require_once 'assets/configure.php';
+require_once 'assets/server.php';
 ?>
 
 
