@@ -37,7 +37,7 @@ include 'assets/server.php';
                 <div class="form-group">
                     <div class="form-check"><label class="form-check-label"><input class="form-check-input" type="checkbox" id="checkboxcheck" onclick="checkboth(this);">I agree to the license terms.</label></div>
                 </div>
-                <div class="form-group"><button id="buttondisen" class="btn btn-primary btn-block" type="submit" disabled="disabled">Sign Up</button></div><a href="success.php" class="already">You already have an account? Login here.</a>
+                <div class="form-group"><button id="buttondisen" class="btn btn-primary btn-block" type="submit" disabled="disabled">Sign Up</button></div><a href="login.php" class="already">You already have an account? Login here.</a>
                 <div style="text-align: center; font-family: calibri; font-size: 12px;"><span id='message'>Make sure the passwords match and then click the button above</span></div>
             </form>
         </div>

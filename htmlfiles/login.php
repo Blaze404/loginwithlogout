@@ -2,45 +2,6 @@
 session_start();
 define('__CONFIG__', true);
 require_once 'assets/server.php';
-
-define('DB_SERVER', 'localhost');
-   define('DB_USERNAME', 'root');
-   define('DB_PASSWORD', 'mysql');
-   define('DB_DATABASE', 'Reg_Demo');
-
-
-$db = mysqli_connect(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_DATABASE);
-
-if($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
-    
-    $email = mysqli_real_escape_string($db,$_POST['email']);
-    $password = mysqli_real_escape_string($db,$_POST['password']); 
-    
-    $sql = "SELECT * FROM UserReg WHERE email = '$email' and password = '$password'";
-    $result = mysqli_query($db,$sql);
-    if (!$result) {
-        printf("Error: %s\n", mysqli_error($con));
-        exit();
-    }
-    $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $active = $row['active'];
-    
-    $count = mysqli_num_rows($result);
-    
-    // If result matched $myusername and $mypassword, table row must be 1 row
-      
-    if($count == 1) {
-    //    session_register("email");
-       $_SESSION['login_user'] = $email;
-       
-       header("location: welcome.php");
-    }else {
-       $error = "Your Login Name or Password is invalid";
-    }
- }
-
-
 ?>
 
 
