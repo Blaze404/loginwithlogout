@@ -1,0 +1,29 @@
+{% extends 'music/base.html' %}
+{% block albums_active %}active{% endblock %}
+
+{% block body%}
+    <div class="container-fluid">
+        {% for album in album_list %}
+        <div class="col-sm-1" ></div>
+        <div class="col-sm-3" style="border: 2px solid black; padding: 2%; background-color: beige;">
+            <img class="img-thumbnail" src="{{album.album_logo.url}}" style="width:40%; height=50%;">
+
+                <h2 style="color: blue">{{album.album_title}}</h2>
+            <a class="btn btn-primary btn-small" href="{% url 'music:detail' album.id %}">Details</a>
+
+            <form action="{% url 'music:album-delete' album.id %}" method="post" style="display: inline;">
+                {% csrf_token %}
+                <input type="hidden" name="album_id" value="{{album.id}}"/>
+                <button class="btn btn-default btn-sm" type="submit">
+                    <span class="glyphicon glyphicon-trash" ></span>
+                </button>
+            </form>
+
+            <a href="#" class="btn btn-default btn-sm btm-favorite">
+                <span class="glyphicon glyphicon-star {% if album.is_favourite %}active{% endif%}"></span>
+            </a>
+
+        </div>
+        {% endfor %}
+    </div>
+{% endblock %}

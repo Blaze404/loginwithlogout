@@ -1,0 +1,108 @@
+<!doctype html>
+
+<html>
+
+<head>
+    <title>BIOG Data</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="initial-scale=1.0">
+
+    <meta name="viewport" content="width=device-width,height=device-height initial-scale=1,maximum-scale=1">
+    <link rel="shortcut icon" href="images/favicon.png">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    {% load staticfiles %}
+    <link rel="stylesheet" type="text/css" href="{% static 'music/aurangabad.css' %}">
+
+</head>
+
+<body>
+    <!--Uppermost Div Containing Everything-->
+    <div class="o_container">
+        <div class="m_container">
+            <!--A Wrapper Div for padding-->
+            <div id="path_diagram">
+                <!--This Diviiosn SHows a path for current page, thus anyone can go to the desired page in a single click-->
+                <span id="path">Path:<br></span>
+                <button type="button" class="btn btn-info my_button">Login</button> ->
+                <button type="button" class="btn btn-info my_button">English</button> ->
+                <button type="button" class="btn btn-info my_button">Zone</button> ->
+                <button type="button" class="btn btn-info my_button">Aurangabad</button> ->
+                <button type="button" class="btn btn-info my_button">Aurangabad</button>
+            </div>
+            <!--End "path_diagram-->
+
+
+            <div id="data">
+                <!--All the data will be contained in this div-->
+
+                <div id="navbar">
+                    <p id="main_head">
+                        <!--<a href="#">Maharashtra</a>-->Zones
+                        <span class="my_marker">&#x25BA;</span>
+                    </p>
+
+                    <p class="sub_main">Andhra Pradesh<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Arunachal Pradesh<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Assam<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Bihar<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Chattisgarh<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Goa<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Gujrat<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Haryana<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Himachal Pradesh<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Jammu & Kashmir<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Jharkhand<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Karnataka<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Kerela<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Madhya Pradesh<span class="my_marker">&#x25BA;</span> </p>
+                    <p id="maha" class="sub_main">Maharashtra<span class="my_marker">&#x25BA;</span> </p>
+
+                    <p class="sub_main">Manipur<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Meghalaya<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Mizoram<span class="my_marker">&#x25BA;</span> </p>
+                    <p class="sub_main">Nagaland<span class="my_marker">&#x25BA;</span> </p>
+                    <!--And Etc.-->
+
+                </div>
+                <!--end "navbar"-->
+
+                <div id="graphs_and_stuff">
+                    <!--This Div contains all details about selected thing-->
+                    <h1>Aurangabad</h1>
+
+                    <div id="things">
+                        <div class="option">
+                            Crimes &nbsp;<i class="fa fa-bomb fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="option">
+                            Unemployement &nbsp;<i class="fa fa-address-card fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="option">
+                            Smart Region &nbsp;<i class="fa fa-laptop fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="option">
+                            Development &nbsp;<i class="fa fa-cogs fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="option">
+                            Education &nbsp;<i class="fa fa-book fa-2x" aria-hidden="true"></i>
+                        </div>
+                        <div class="option">
+                            Others &nbsp;<i class="fa fa-random fa-2x" aria-hidden="true"></i>
+                        </div>
+                    </div>
+
+                </div>
+                <!--End "graphs_and_stuff"-->
+
+            </div>
+            <!--End "data"-->
+
+
+        </div>
+        <!--End "m_container"-->
+    </div>
+    <!--End "o_container" div-->
+</body>
+
+</html>
